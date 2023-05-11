@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ chat_room.name }}</h1>
+  <p>{{ chat_room.description }}</p>
+  <h2>{{ username }}</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Join</button>
+  </form>
+{% endblock %}
