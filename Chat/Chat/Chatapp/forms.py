@@ -9,3 +9,4 @@ class ChatMessageForm(ModelForm):
     class Meta:
         model = ChatMessage
         fields = ["body",]
+        
