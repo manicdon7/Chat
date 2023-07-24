@@ -7,10 +7,10 @@ import json
 
 # Create your views here.
 def index(request):
-    user = request.user.profile
+    user = request.user.Profile
     friends = user.friends.all()
     context = {"user": user, "friends": friends}
-    return render(request, "mychatapp/index.html", context)
+    return render(request, "Chatapp/index.html", context)
 
 
 def detail(request,pk):
